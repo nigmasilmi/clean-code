@@ -1,35 +1,35 @@
 class Point:
-    def __init__(self, coordX, coordY):
-        self.coordX = coordX
-        self.coordY = coordY
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
 
 class Rectangle:
-    def __init__(self, starting_point, width, high):
-        self.starting_point = starting_point
+    def __init__(self, origin, width, height):
+        self.origin = origin
         self.width = width
-        self.high = high
+        self.height = height
 
-    def area(self):
-        return self.width * self.high
+    def get_area(self):
+        return self.width * self.height
 
-    def print_vertices(self):
-        top_right_vertix = self.starting_point.coordX + self.width
-        bottom_left_vertix = self.starting_point.coordY + self.high
-        print('Starting Point (X)): ' + str(self.starting_point.coordX))
-        print('Starting Point (Y)): ' + str(self.starting_point.coordY))
+    def print_coordinates(self):
+        top_right_vertix = self.origin.x + self.width
+        bottom_left_vertix = self.origin.y + self.height
+        print('Starting Point (X)): ' + str(self.origin.x))
+        print('Starting Point (Y)): ' + str(self.origin.y))
         print('End Point X-Axis (Top Right): ' + str(top_right_vertix))
         print('End Point Y-Axis (Bottom Left): ' + str(bottom_left_vertix))
 
 
-def build():
-    main_point = Point(50, 100)
-    rectangle = Rectangle(main_point, 90, 10)
+def build_rectangle():
+    rectangle_origin = Point(50, 100)
+    rectangle = Rectangle(rectangle_origin, 90, 10)
 
     return rectangle
 
 
-first_rectangle = build()
+first_rectangle = build_rectangle()
 
-print(first_rectangle.area())
-first_rectangle.print_vertices()
+print(first_rectangle.get_area())
+first_rectangle.print_coordinates()
