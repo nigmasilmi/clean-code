@@ -93,3 +93,9 @@ Following the course by Maximilian Schwarzmueller: [Clean Code](https://www.udem
 ### don't use
 
 - Slangs, unclear abbreviations, disinformation
+
+## 2. Code Structure, Comments and Formatting
+
+** if the code is clean, the comments aren't necessary, with special execeptions **
+
+- Good comments are for example, legal information, a warning and an explanation for what is targeted in a given regex expression, or a TODO note
